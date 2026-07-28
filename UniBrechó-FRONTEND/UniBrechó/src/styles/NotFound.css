@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.notFound {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  background: linear-gradient(135deg, #edf5ff 0%, #d8e9fb 50%, #f6fbff 100%);
+}
+
+.bgCircle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(15px);
+  animation: float 8s ease-in-out infinite;
+}
+
+.circle1 {
+  width: 260px;
+  height: 260px;
+  background: rgba(0, 80, 158, 0.12);
+  left: -80px;
+  top: -80px;
+}
+
+.circle2 {
+  width: 180px;
+  height: 180px;
+  background: rgba(249, 201, 0, 0.2);
+  right: 80px;
+  top: 120px;
+  animation-delay: 2s;
+}
+
+.circle3 {
+  width: 220px;
+  height: 220px;
+  background: rgba(0, 59, 112, 0.12);
+  bottom: -60px;
+  right: -40px;
+  animation-delay: 4s;
+}
+
+.notFoundCard {
+  position: relative;
+
+  width: 100%;
+  max-width: 650px;
+
+  padding: 60px;
+
+  background: white;
+
+  border-radius: 28px;
+
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.15);
+
+  text-align: center;
+
+  animation: fadeUp 0.8s ease;
+}
+
+.logo404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 35px;
+
+  color: #003b70;
+
+  font-size: 30px;
+
+  font-weight: 800;
+}
+
+.logo404 svg {
+  color: #f9c900;
+}
+
+.iconError {
+  width: 110px;
+  height: 110px;
+
+  margin: auto;
+
+  border-radius: 50%;
+
+  background: #eef5ff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #003b70;
+
+  margin-bottom: 25px;
+
+  animation: pulse 2.5s infinite;
+}
+
+.notFoundCard h1 {
+  margin: 0;
+
+  font-size: 140px;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  color: #003b70;
+}
+
+.notFoundCard h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  font-size: 34px;
+
+  color: #102a43;
+}
+
+.notFoundCard p {
+  margin: auto;
+
+  max-width: 470px;
+
+  color: #64748b;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+}
+
+.buttons404 {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  margin-top: 45px;
+
+  flex-wrap: wrap;
+}
+
+.primary404,
+.secondary404 {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 15px 30px;
+
+  border-radius: 14px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.primary404 {
+  background: #003b70;
+
+  color: white;
+}
+
+.primary404:hover {
+  background: #00509e;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 15px 30px rgba(0, 59, 112, 0.25);
+}
+
+.secondary404 {
+  background: white;
+
+  color: #003b70;
+
+  border: 2px solid #003b70;
+}
+
+.secondary404:hover {
+  background: #003b70;
+
+  color: white;
+
+  transform: translateY(-4px);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .notFoundCard {
+    padding: 40px 25px;
+  }
+
+  .notFoundCard h1 {
+    font-size: 100px;
+  }
+
+  .notFoundCard h2 {
+    font-size: 28px;
+  }
+
+  .buttons404 {
+    flex-direction: column;
+  }
+
+  .primary404,
+  .secondary404 {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .notFoundCard h1 {
+    font-size: 80px;
+  }
+
+  .logo404 {
+    font-size: 24px;
+  }
+
+  .notFoundCard h2 {
+    font-size: 24px;
+  }
+
+  .notFoundCard p {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,260 @@
+.loginPage {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 80px;
+
+  padding: 40px;
+
+  background: linear-gradient(135deg, #ffffff, #eaf4ff);
+
+  font-family: Inter, Arial, sans-serif;
+}
+
+.loginBrand {
+  max-width: 450px;
+}
+
+.brandLogo {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  color: #003b70;
+}
+
+.brandLogo svg {
+  color: #2e7d32;
+}
+
+.loginBrand h2 {
+  font-size: 42px;
+
+  color: #003b70;
+
+  margin-top: 40px;
+}
+
+.loginBrand p {
+  font-size: 18px;
+
+  color: #64748b;
+
+  line-height: 1.6;
+}
+
+.benefits {
+  margin-top: 35px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.benefits div {
+  background: white;
+
+  padding: 18px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+
+  font-weight: 600;
+
+  color: #102a43;
+}
+
+.loginCard {
+  background: white;
+
+  width: 420px;
+
+  padding: 45px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.15);
+}
+
+.loginCard h2 {
+  font-size: 32px;
+
+  color: #003b70;
+
+  margin: 0;
+}
+
+.loginCard p {
+  color: #64748b;
+
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+
+  color: #102a43;
+
+  margin-top: 10px;
+}
+
+.inputGroup {
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 0 15px;
+
+  border: 1px solid #d9e2ec;
+
+  border-radius: 12px;
+}
+
+.inputGroup svg {
+  color: #2e7d32;
+}
+
+.inputGroup input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+.loginButton {
+  margin-top: 25px;
+
+  height: 55px;
+
+  border-radius: 12px;
+
+  background: #003b70;
+
+  color: white;
+
+  font-weight: bold;
+
+  font-size: 16px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.loginButton:hover {
+  background: #00509e;
+  transform: translateY(-3px);
+}
+
+.register {
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #64748b;
+}
+
+.register a {
+  color: #2e7d32;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .loginPage {
+    flex-direction: column;
+
+    gap: 30px;
+
+    padding: 25px;
+  }
+
+  .loginBrand {
+    text-align: center;
+  }
+
+  .brandLogo {
+    justify-content: center;
+  }
+
+  .loginBrand h2 {
+    font-size: 32px;
+  }
+
+  .loginCard {
+    width: 100%;
+
+    max-width: 420px;
+  }
+  .register {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+
+    color: #64748b;
+
+    font-size: 15px;
+  }
+
+  .register a {
+    color: #003b70;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+  }
+
+  .register a:hover {
+    color: #00509e;
+
+    text-decoration: underline;
+  }
+
+  .erroLogin {
+    color: #d32f2f;
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+    font-weight: 600;
+  }
+}

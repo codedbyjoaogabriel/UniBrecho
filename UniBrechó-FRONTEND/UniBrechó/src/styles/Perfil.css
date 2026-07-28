@@ -1,0 +1,233 @@
+.perfil {
+  display: flex;
+  min-height: 100vh;
+  background: #f5f7fb;
+  font-family: "Inter", sans-serif;
+}
+
+.perfilSidebar {
+  width: 260px;
+  background: #003b70;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 22px;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebarLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 45px;
+}
+
+.sidebarLogo h2 {
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.perfilSidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.perfilSidebar nav a {
+  color: white;
+  text-decoration: none;
+  padding: 14px 18px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.25s;
+  font-weight: 600;
+}
+
+.perfilSidebar nav a:hover,
+.perfilSidebar nav .active {
+  background: #00509e;
+}
+
+.logoutButton {
+  border: none;
+  cursor: pointer;
+  background: #d62828;
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: 0.25s;
+}
+
+.logoutButton:hover {
+  background: #b71c1c;
+}
+
+.perfilContent {
+  flex: 1;
+  margin-left: 260px;
+  padding: 45px;
+}
+
+.perfilHeader {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.perfilAvatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #003b70;
+  color: white;
+  font-size: 32px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfilHeader h1 {
+  font-size: 34px;
+  color: #003b70;
+  margin-bottom: 8px;
+}
+
+.perfilHeader p {
+  color: #6b7280;
+  font-size: 16px;
+}
+
+.perfilCard {
+  background: white;
+  border-radius: 20px;
+  padding: 35px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.perfilCard h2 {
+  margin-bottom: 30px;
+  color: #003b70;
+  font-size: 24px;
+}
+
+.inputGroup {
+  margin-bottom: 22px;
+}
+
+.inputGroup label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.inputIcon {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8fafc;
+  border: 2px solid #dbe4ef;
+  border-radius: 12px;
+  padding: 0 16px;
+  transition: 0.2s;
+}
+
+.inputIcon:focus-within {
+  border-color: #003b70;
+}
+
+.inputIcon svg {
+  color: #003b70;
+}
+
+.inputIcon input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  height: 54px;
+  font-size: 15px;
+}
+
+.saveButton {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  background: #003b70;
+  color: white;
+  height: 56px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: 0.25s;
+}
+
+.saveButton:hover:not(:disabled) {
+  background: #00509e;
+}
+
+.saveButton:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+@media (max-width: 900px) {
+  .perfilSidebar {
+    display: none;
+  }
+
+  .perfilContent {
+    margin-left: 0;
+    padding: 25px;
+  }
+
+  .perfilHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .perfilAvatar {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+
+  .perfilCard {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .perfilContent {
+    padding: 18px;
+  }
+
+  .perfilHeader h1 {
+    font-size: 28px;
+  }
+
+  .perfilCard h2 {
+    font-size: 22px;
+  }
+
+  .saveButton {
+    height: 52px;
+  }
+}

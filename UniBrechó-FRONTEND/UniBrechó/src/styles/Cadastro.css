@@ -1,0 +1,191 @@
+* {
+  box-sizing: border-box;
+}
+
+.cadastro {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f8fc, #eaf4ff);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.cadastroCard {
+  width: 100%;
+  max-width: 480px;
+
+  background: #ffffff;
+
+  border-radius: 20px;
+
+  padding: 40px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.logoCadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  color: #003b70;
+
+  margin-bottom: 25px;
+}
+
+.logoCadastro svg {
+  color: #2e7d32;
+}
+
+.logoCadastro h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.cadastroCard h2 {
+  margin-bottom: 10px;
+
+  color: #003b70;
+
+  text-align: center;
+}
+
+.cadastroCard p {
+  text-align: center;
+
+  color: #64748b;
+
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  margin-top: 18px;
+
+  font-weight: 600;
+
+  color: #003b70;
+}
+
+input {
+  width: 100%;
+
+  padding: 14px;
+
+  border-radius: 10px;
+
+  border: 1px solid #d1d5db;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #003b70;
+  box-shadow: 0 0 0 3px rgba(0, 59, 112, 0.15);
+}
+
+.senhaInput {
+  position: relative;
+}
+
+.senhaInput input {
+  padding-right: 50px;
+}
+
+.senhaInput button {
+  position: absolute;
+
+  right: 10px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  color: #64748b;
+}
+
+.btnCadastro {
+  margin-top: 35px;
+
+  width: 100%;
+
+  padding: 15px;
+
+  background: #003b70;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.btnCadastro:hover {
+  background: #00509e;
+}
+
+.cadastroCard span {
+  display: block;
+
+  text-align: center;
+
+  margin-top: 25px;
+
+  color: #64748b;
+}
+
+.cadastroCard span a {
+  margin-left: 8px;
+
+  text-decoration: none;
+
+  color: #003b70;
+
+  font-weight: 700;
+}
+
+.cadastroCard span a:hover {
+  color: #00509e;
+}
+
+@media (max-width: 600px) {
+  .cadastroCard {
+    padding: 30px 25px;
+  }
+
+  .logoCadastro h1 {
+    font-size: 26px;
+  }
+
+  .cadastroCard h2 {
+    font-size: 24px;
+  }
+}

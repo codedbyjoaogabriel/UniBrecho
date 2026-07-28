@@ -1,0 +1,629 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f8fc;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.home {
+  min-height: 100vh;
+  background: #f5f8fc;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.homeHeader {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 18px 7%;
+
+  background: white;
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  text-decoration: none;
+}
+
+.logo svg {
+  color: #f9c900;
+}
+
+.logo h1 {
+  color: #003b70;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.searchBar {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  background: #f3f7fb;
+
+  border-radius: 50px;
+
+  padding: 0 18px;
+
+  height: 52px;
+
+  border: 2px solid transparent;
+
+  transition: 0.3s;
+}
+
+.searchBar:focus-within {
+  border-color: #003b70;
+}
+
+.searchBar svg {
+  color: #64748b;
+}
+
+.searchBar input {
+  flex: 1;
+
+  margin-left: 12px;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-size: 15px;
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboardButton,
+.logoutButtonHome {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  border: none;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  font-weight: 600;
+}
+
+.dashboardButton {
+  background: #003b70;
+  color: white;
+}
+
+.dashboardButton:hover {
+  background: #00509e;
+}
+
+.logoutButtonHome {
+  background: #c62828;
+  color: white;
+}
+
+.logoutButtonHome:hover {
+  background: #b71c1c;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #003b70;
+
+  font-weight: 700;
+}
+
+/* ==========================
+   CONTEÚDO
+========================== */
+
+.homeContent {
+  width: min(1400px, 94%);
+  margin: 40px auto;
+}
+
+.homeTitle {
+  margin-bottom: 35px;
+}
+
+.homeTitle h2 {
+  color: #003b70;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+.homeTitle p {
+  margin-top: 12px;
+
+  color: #64748b;
+
+  font-size: 18px;
+
+  max-width: 720px;
+
+  line-height: 1.6;
+}
+
+/* ==========================
+   CATEGORIAS
+========================== */
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-bottom: 40px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 18px;
+
+  border-radius: 30px;
+
+  border: 2px solid #dce6f2;
+
+  background: white;
+
+  color: #003b70;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  font-weight: 600;
+}
+
+.category:hover {
+  border-color: #003b70;
+
+  transform: translateY(-2px);
+}
+
+.category.active {
+  background: #003b70;
+
+  color: white;
+
+  border-color: #003b70;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.productsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+  gap: 30px;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+
+  transition: 0.35s;
+}
+
+.productCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.15);
+}
+
+.productImageContainer {
+  width: 100%;
+  height: 230px;
+
+  overflow: hidden;
+
+  background: #eef5ff;
+}
+
+.productImage {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.4s;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+
+  padding: 22px;
+
+  flex: 1;
+}
+
+/* ==========================
+   INFORMAÇÕES DO PRODUTO
+========================== */
+
+.productCategory {
+  display: inline-block;
+
+  padding: 6px 12px;
+
+  background: #eaf4ff;
+
+  color: #003b70;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+.productInfo h3 {
+  font-size: 22px;
+
+  color: #003b70;
+
+  margin-bottom: 12px;
+
+  min-height: 55px;
+}
+
+.productDescription {
+  color: #64748b;
+
+  line-height: 1.6;
+
+  font-size: 15px;
+
+  flex: 1;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
+.productFooter {
+  margin-top: 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.productPrice {
+  color: #2e7d32;
+
+  font-size: 28px;
+
+  font-weight: bold;
+}
+
+.productFooter small {
+  color: #64748b;
+}
+
+/* ==========================
+   BOTÕES
+========================== */
+
+.productButtons {
+  margin-top: 22px;
+
+  display: flex;
+
+  gap: 12px;
+}
+
+.detailsButton {
+  flex: 1;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #003b70;
+
+  color: white;
+
+  padding: 14px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.detailsButton:hover {
+  background: #00509e;
+
+  transform: translateY(-2px);
+}
+
+.favoriteButton,
+.whatsappButton {
+  width: 50px;
+
+  height: 50px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.favoriteButton {
+  background: #ffe5e5;
+
+  color: #d32f2f;
+}
+
+.favoriteButton:hover {
+  background: #ffcaca;
+}
+
+.whatsappButton {
+  background: #dcfce7;
+
+  color: #2e7d32;
+}
+
+.whatsappButton:hover {
+  background: #c9f7d4;
+}
+
+/* ==========================
+   LOADING
+========================== */
+
+.loading {
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 20px;
+
+  padding: 80px 0;
+}
+
+/* ==========================
+   ANIMAÇÕES
+========================== */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+.productCard {
+  animation: fadeUp 0.45s ease;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media (max-width: 1100px) {
+  .homeHeader {
+    flex-wrap: wrap;
+  }
+
+  .searchBar {
+    order: 3;
+
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerButtons {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .productsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .homeTitle h2 {
+    font-size: 32px;
+  }
+
+  .logo h1 {
+    font-size: 26px;
+  }
+
+  .dashboardButton {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .homeHeader {
+    padding: 18px;
+  }
+
+  .homeContent {
+    width: 92%;
+  }
+
+  .categories {
+    justify-content: center;
+  }
+
+  .productInfo h3 {
+    font-size: 20px;
+  }
+
+  .productPrice {
+    font-size: 24px;
+  }
+
+  .productButtons {
+    flex-direction: column;
+  }
+
+  .detailsButton {
+    width: 100%;
+  }
+
+  .favoriteButton,
+  .whatsappButton {
+    width: 100%;
+
+    height: 46px;
+  }
+
+  .userInfo span {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo h1 {
+    display: none;
+  }
+
+  .searchBar {
+    height: 48px;
+  }
+
+  .productImageContainer {
+    height: 190px;
+  }
+}
+
+/* ==========================
+   SCROLLBAR
+========================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf2f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #003b70;
+
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00509e;
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+  z-index: 2;
+}
+
+.favoriteButton:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
